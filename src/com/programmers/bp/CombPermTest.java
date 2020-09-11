@@ -1,68 +1,15 @@
-# 완전탐색 문제 속 주요 Method 정리
+package com.programmers.bp;
 
-**Brute Force Algorithm** : 모든 경우의 수를 전부 ckw아서 답을 찾는 알고리즘
+import java.util.Arrays;
 
-* 자원만 받쳐준다면 항상 100%의 정확도를 보장
-* 완전 탐색 기법의 종류
-  * Brute Force : for과 if를 이용하여 처음부터 끝까지 탐색
-  * 재귀함수 : 특정 함수 내에서 자기 자신을 다시 호출하여 문제 해결
-  * 순열 : 서로 다른 n개의 원소에서 r개의 중복을 허용하지 않고 순서대로 늘어 놓은 수
-  * 비트 마스크 : 이진수 표현을 자료구조로 쓰는 기법 (AND, OR, XOR, SHIFT, NOT)
-  * BFS(너비우선탐색), DFS(깊이우선탐색)
+/**
+ * @author : kimhyunjin
+ * @CretaedAt : Sep 11, 2020
+ * @주요 개념 :
+ */
+public class CombPermTest {
 
-
-
-
-
-<br>
-
-<br>
-
-### PracticeTest - 모의고사
-
-재귀함수를 적용하여 풀었으나 BF 방법으로도 가능하다.
-
-```java
-import java.util.Collections;
-  
-public static <T extends Object & Comparable> T max(Collection coll);
-public static <T extends Object & Comparable> T min(Collection coll);
-```
-
-* **Collections** 클래스의 정적 메소드
-* 파라미터 리스트의 최대 / 최소 값을 찾아서 반환
-* max() method 사용 시 리스트가 비어있을 경우 *NoSuchElementException* 에러 발생
-
-* * 
-
-
-<br>
-
-<br>
-
-### FindDecimal - 소수 찾기
-
-|           | 조합 | 중복조합 | 순열 | 중복순열 |
-| --------- | ---- | -------- | ---- | -------- |
-| 순서 구분 | X    | X        | O    | O        |
-| 중복 허용 | X    | O        | X    | O        |
-
-* **순열**은 순서를 구분하기 때문에 [ 0, 1, 2]와 [ 1, 2 0]을 다른 경우로 본다.
-  * **순서있게 배열**
-  * 즉 다음 뽑을 원소를 찾을 때 처음부터(0번부터) 찾는다.
-* **조합**을 순서를 구분하지 않기 때문에 [ 0, 1, 2]와 [ 1, 2 0]를 같은 경우로 본다.
-  * **순서와 상관 없이 뽑는 거에만 집중**
-  * 즉 다음 원소를 뽑을 때 본인 다음 번호부터 찾는다.
-
-* 순열과 조합은 원소가 사용되었는지 확인하지만, **중복순열/조합**은 원소 사용 여부를 확인하지 않고 뽑는다.
-  * 자기 자신을 포함 하냐, 하지 않느냐의 차이
-
-<br>
-
-#### 조합
-
-```java
-public static String[] BOX = { "A", "B", "C", "D" };
+	public static String[] BOX = { "A", "B", "C", "D" };
 
 	public static void main(String[] args) {
 		int n = BOX.length;
@@ -167,6 +114,4 @@ public static String[] BOX = { "A", "B", "C", "D" };
 			repeatedPermutation(perm, n, r, current + 1);
 		}
 	}
-```
-
-
+}
