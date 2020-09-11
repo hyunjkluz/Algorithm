@@ -59,7 +59,7 @@ public static <T extends Object & Comparable> T min(Collection coll);
 
 <br>
 
-#### 조합
+#### 조합, 중복조합, 순열, 중복순열 예시 코드
 
 ```java
 public static String[] BOX = { "A", "B", "C", "D" };
