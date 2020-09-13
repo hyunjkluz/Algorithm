@@ -83,3 +83,32 @@ for (Integer i : lists) {
   ```
 
   
+  
+  <br>
+
+### BigNumber - 큰 수 만들기
+
+#### String vs StringBuilder vs StringBuffer
+
+##### String
+
+* Immutable 객체(변하지 않음)이기 때문에 문자열 재할당, 문자열 더해서 새로운 문자열 만들기 등 문자열을 변경하면 변경된 문자열을 위해 새로운 문자열을 만들어낸다. 
+  * String은 내부에서 값을 *final char[]* 형태로 저장해두기 때문이다.
+* **즉, 새로운 값을 할당할 때마다 String이 새로 생성된다.**
+* String + String은 메모리 할당/해제를 발생시킴 -> 연산이 많아지면 성능 저하가 올 수 있음 !
+  * 반복문에서 Sting을 계속 더하면, 각 String의 주소 값이 Stack에 쌓이고, class는 GC(Garbage Collector)가 호출되기 전 까지 heap에 지속적으로 쌓이게됨 !
+* 하지만 멀티 스레드 환경에서 값 동기화를 지원(Thread-safe)하기 때문에, 내부 데이터를 자유롭게 공유 가능하다.
+
+#####StringBuilder
+
+* 변경 가능한 문자열 클래스(**동일 객체 내에서 문자열 변경 가능**)
+* 값은 memory에 **append**하는 방식으로 클래스를 직접생성하지 않는다.
+* 즉, 문자열을 더할 때 새로운 객체 생성이 아닌 **기존의 객체에 더하는 방식**이다.
+* 최대 용량을 초과하면 *ArgumentOutOfRangeException* 또는 *OutOfMemoryException* 발생된다.
+* 변경가능한 문자열이지만 멀티 스레드 환경에서 값 동기화(synchronization)를 지원하지 않는다.
+  * 단일 스레드 환경에서 성능 뛰어남
+* 문자열의 추가,수정,삭제가 빈번하게 발생할 경우 사용한다.
+
+#####StringBuffer
+
+* StringBuilder와 대부분 비슷하나, StringBuilder와 다르게  멀티 스레드 환경에서 값 동기화를 지원한다.
