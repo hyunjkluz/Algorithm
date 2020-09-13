@@ -1,6 +1,6 @@
 
 
-# 탐욕법(Greedy) 문제 속 주요 Method 정리
+# 탐욕법(Greedy) 문제 속 주요 Idea 정리
 
 **Greedy** : 문제 해결 과정 중, 그 순간순간마다 최적이라고 생각하는 방법을 결정하여 최종 해답에 도달한다.
 * 최선의 선택이 최선의 해결책이 되진 않지만 .. 이 해결법은 **계산 속도가 매우 빠르다.**
@@ -99,7 +99,7 @@ for (Integer i : lists) {
   * 반복문에서 Sting을 계속 더하면, 각 String의 주소 값이 Stack에 쌓이고, class는 GC(Garbage Collector)가 호출되기 전 까지 heap에 지속적으로 쌓이게됨 !
 * 하지만 멀티 스레드 환경에서 값 동기화를 지원(Thread-safe)하기 때문에, 내부 데이터를 자유롭게 공유 가능하다.
 
-#####StringBuilder
+##### StringBuilder
 
 * 변경 가능한 문자열 클래스(**동일 객체 내에서 문자열 변경 가능**)
 * 값은 memory에 **append**하는 방식으로 클래스를 직접생성하지 않는다.
@@ -109,6 +109,6 @@ for (Integer i : lists) {
   * 단일 스레드 환경에서 성능 뛰어남
 * 문자열의 추가,수정,삭제가 빈번하게 발생할 경우 사용한다.
 
-#####StringBuffer
+##### StringBuffer
 
 * StringBuilder와 대부분 비슷하나, StringBuilder와 다르게  멀티 스레드 환경에서 값 동기화를 지원한다.
