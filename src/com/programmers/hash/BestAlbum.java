@@ -9,6 +9,7 @@ import java.util.*;
  * @author : kimhyunjin
  * @CretaedAt : Aug 7, 2020
  * @주요 개념 : compareTo, 우선순위
+ * @문제 링크 : https://programmers.co.kr/learn/courses/30/lessons/42579
  */
 
 class Song implements Comparable<Song> {
@@ -37,11 +38,11 @@ public class BestAlbum {
 		String[] genres = { "classic", "pop", "classic", "classic", "pop" };
 		int[] plays = { 500, 600, 150, 800, 2500 };
 
-		System.out.println(solution(genres, plays).toString());
+		System.out.println(Arrays.toString(solution(genres, plays)));
 	}
 
 	public static int[] solution(String[] genres, int[] plays) {
-		int[] answer = {};
+		ArrayList<Integer> playList = new ArrayList<Integer>();
 		Map<String, Integer> genreRankHash = new LinkedHashMap<String, Integer>();
 
 		for (int i = 0; i < plays.length; i++) {
@@ -49,7 +50,8 @@ public class BestAlbum {
 		}
 
 		List<String> keySetList = new ArrayList<>(genreRankHash.keySet());
-		Collections.sort(keySetList, (o1, o2) -> (genreRankHash.get(o1).compareTo(genreRankHash.get(o2))));
+		// 많이 재생된 순서로 Key 정렬
+		Collections.sort(keySetList, (o1, o2) -> (genreRankHash.get(o2).compareTo(genreRankHash.get(o1))));
 
 		// 각 노래의 1, 2위
 		HashMap<String, PriorityQueue<Song>> songRank = new HashMap<String, PriorityQueue<Song>>();
@@ -60,7 +62,17 @@ public class BestAlbum {
 			songRank.get(genres[i]).add(new Song(i, plays[i], genres[i]));
 		}
 
-		return answer;
+		for (String genre : keySetList) {
+			PriorityQueue<Song> list = songRank.get(genre);
+
+			int cnt = 2;
+			while (!list.isEmpty() && cnt > 0) {
+				playList.add(list.poll().idx);
+				cnt--;
+			}
+		}
+
+		return playList.stream().mapToInt(i -> i).toArray();
 	}
 
 }
