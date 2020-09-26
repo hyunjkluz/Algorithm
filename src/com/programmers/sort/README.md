@@ -45,7 +45,8 @@ public static void sort(Object[] a);
     ```java
     // 방법 1) 익명 인터페이스 구현 예시
     class CustomComparator implements Comparator<Integer> { 
-      @Override public int compare(Integer o1, Integer o2) { 
+      @Override 
+      public int compare(Integer o1, Integer o2) { 
         return o2.compareTo(o1); 
       } 
     }

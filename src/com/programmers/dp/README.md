@@ -21,7 +21,8 @@
 
 #### DP vs Divide and Conquer(분할 정복법)
 
-* **분할정복법**의 분할된 sub-problem은 disjoint[^disjoint]하다.
+* **분할정복법**의 분할된 sub-problem은 disjoint하다.
+    * disjoint : 서로소(공통 원소가 없는 두 집합)
     * 즉, 작은 문제가 중복이 일어나지 않는다.
     * 단지 작은 문제로 나누어 푸는것일 뿐
 
@@ -33,4 +34,3 @@
 
 
 
-[^disjoint]: 서로소(공통 원소가 없는 두 집합)

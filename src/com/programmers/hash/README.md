@@ -132,6 +132,7 @@ IntStream intStream = IntStream.range(0, 100);	//rangeClosed(s, e) : s<= n <= e
 
 
 * 최종 처리 메소드
+
 | Return Type | Method                                             | Desc                                            |
 | ----------- | -------------------------------------------------- | ----------------------------------------------- |
 | long        | count()                                            | 요소 개수 집계                                  |

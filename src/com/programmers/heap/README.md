@@ -43,18 +43,19 @@
   ```
 
   * 1을 표현하는 것이 <u>String 인스턴스</u>와 <u>Integer 인스턴스</u>이기 때문에 서로 다른 객체로 취급한다. -> 둘 가 저장 가능
-  * 각 인스턴스들을 다른 것으로 인식시키기 위해서는 **equals()**와 **hashCode()** 메소드를 재정의해줘야 한다.
-    * [equals()와 hashCode()와의 관계](#equals() 와 hashCode()의 관계)
-    * [재정의 시 주의해야할 점](#재정의 시 주의해야할 점)
+  * 각 인스턴스들을 다른 것으로 인식시키기 위해서는 **equals()** 와 **hashCode()** 메소드를 재정의해줘야 한다.
+    * [equals()와 hashCode()와의 관계](#equals-and-hashcode)
+    * [재정의 시 주의해야할 점](#when-overriding)
 
 * 저장 순서를 유지하지 않음
 
   * 저장 순서와 가져오는 순서가 다름
-  * 저장 순와 가져오는 순서가 같아야할 때(저장 순서 중요할 때) **LinkedHashSet** 사용
+  * 저장 순서와 가져오는 순서가 같아야할 때(저장 순서 중요할 때) **LinkedHashSet** 사용
 
 <br>
 
-##### equals() 와 hashCode()의 관계
+###### equals and hashcode
+##### equals와 hashcode의 관계
 
 * equals() 
   
@@ -87,7 +88,8 @@ _"**equals (Object)** 메서드 에 따라 두 객체가 같으면 두 객체 �
 
 
 
-##### 재정의 시 주의해야할 점
+
+##### 재정의 시 주의해야할 점(when overriding)
 
 * HashSet 안에있는 요소를 검색 할 때 먼저 요소의 해시 코드를 생성하고, 이 해시 코드에 해당하는 객체를 찾는다.
 * equals()를 이용한 비교에 의해서 **true**를 얻는 두 객체는 **hashCode()를 호출한 결과도 같아야한다.**

@@ -1,6 +1,6 @@
 # 완전탐색 문제 속 주요 Method 정리
 
-**Brute Force Algorithm** : 모든 경우의 수를 전부 ckw아서 답을 찾는 알고리즘
+**Brute Force Algorithm** : 모든 경우의 수를 전부 찾아서 답을 찾는 알고리즘
 
 * 자원만 받쳐준다면 항상 100%의 정확도를 보장
 * 완전 탐색 기법의 종류
@@ -32,8 +32,6 @@ public static <T extends Object & Comparable> T min(Collection coll);
 * **Collections** 클래스의 정적 메소드
 * 파라미터 리스트의 최대 / 최소 값을 찾아서 반환
 * max() method 사용 시 리스트가 비어있을 경우 *NoSuchElementException* 에러 발생
-
-* * 
 
 
 <br>
