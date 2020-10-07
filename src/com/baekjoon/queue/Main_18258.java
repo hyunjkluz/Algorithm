@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.beakjoon.queue;
+package com.baekjoon.queue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
