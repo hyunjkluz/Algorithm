@@ -13,6 +13,7 @@ import java.util.*;
  * @author : kimhyunjin
  * @CretaedAt : Nov 5, 2020
  * @문제 링크 : https://www.acmicpc.net/problem/2234
+ * 테스크 테이스 : https://upload.acmicpc.net/2d62ed19-ea92-4a35-a016-11d02581e542/
  */
 public class Main_2234 {
 	public static int N, M;
