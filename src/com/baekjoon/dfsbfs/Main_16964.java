@@ -13,7 +13,7 @@ import java.util.*;
  * @CretaedAt : Nov 8, 2020
  * @문제 링크 : https://www.acmicpc.net/problem/16964
  */
-public class Main_12869 {
+public class Main_16964 {
 	public static int N;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
