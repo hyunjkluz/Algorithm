@@ -68,6 +68,7 @@ public class Main_11779 {
 				// 현재까지의 비용 + 이동 비용 < 이동할 노드의 비용
 				if (newWeight < dist[nextEnd]) {
 					dist[nextEnd] = newWeight;
+					// 최소 비용이 갱신될 때 어디서 온 것인지 저장
 					past[nextEnd] = current.end;
 					pq.add(new Bus(nextEnd, newWeight));
 				}

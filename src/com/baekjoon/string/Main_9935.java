@@ -55,6 +55,7 @@ public class Main_9935 {
 	public static String solution2(String target, String explosion) {
 		while (target.length() >= explosion.length()) {
 			int pastLength = target.length();
+			// replaceAll은 메모리를 많이 사용함 : 메소드를 만들 때 이미 잡아놓은 메모리가 있을거기 때문에
 			target = target.replaceAll(explosion, "");
 
 			if (pastLength == target.length()) {
