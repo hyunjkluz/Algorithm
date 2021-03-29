@@ -6,9 +6,7 @@ package com.baekjoon.dp;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author : kimhyunjin
@@ -28,7 +26,7 @@ public class Main_11066 {
 
 			sb.append(solution(pages, costs) + "\n");
 		}
-		
+
 		System.out.println(sb.toString());
 	}
 
@@ -55,13 +53,11 @@ public class Main_11066 {
 
 				for (int k = i; k < i + j; k++) {
 					/*
-					 * dp : 파일 합쳐질 때 비용들의 합 
-					 * i(start)와 j(end)사이의 어느 한 부분 k를 사이에 두고 나눠서 
-					 * i ~ k, k + 1 ~ j을 합치는데 최소 비용을 구하고 
-					 * 이 최소 비용과 마지막 파일을 합친 값(비용)을 더함 = fileSum
+					 * dp : 파일 합쳐질 때 비용들의 합 i(start)와 j(end)사이의 어느 한 부분 k를 사이에 두고 나눠서 i ~ k, k + 1 ~
+					 * j을 합치는데 최소 비용을 구하고 이 최소 비용과 마지막 파일을 합친 값(비용)을 더함 = fileSum
 					 * 
-					 * dp[1][2]가 70 dp[3][4]가 80이면 
-					 * dp[1][4]가 150이 아닌 dp[1][2]+dp[3][4]+[1]부터[4]까지의합 = 300이 되어야한다.
+					 * dp[1][2]가 70 dp[3][4]가 80이면 dp[1][4]가 150이 아닌 dp[1][2]+dp[3][4]+[1]부터[4]까지의합
+					 * = 300이 되어야한다.
 					 */
 					dp[i][i + j] = Math.min(dp[i][k] + dp[k + 1][i + j] + fileSum(i, i + j, sumFiles), dp[i][i + j]);
 				}

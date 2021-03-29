@@ -9,7 +9,7 @@ import java.util.Comparator;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Sep 9, 2020
- * @주요 개념 :
+ * @문제 링크 : https://programmers.co.kr/learn/courses/30/lessons/42746
  */
 public class MaxNumber {
 	public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class MaxNumber {
 			public int compare(String s1, String s2) {
 				// 내림차순
 				// return (s1 + s2).compareTo(s2 + s1);
-				
+
 				// 오름차순
 				return (s2 + s1).compareTo(s1 + s2);
 			}

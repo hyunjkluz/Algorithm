@@ -12,6 +12,7 @@ import java.util.Arrays;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Jan 4, 2021
+ * @문제 이름 : 크로아티아 알파벳
  * @문제 링크 : https://www.acmicpc.net/problem/2941
  */
 public class Main_2941 {

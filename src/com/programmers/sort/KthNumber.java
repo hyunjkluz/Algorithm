@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Sep 9, 2020
- * @주요 개념 :
+ * @문제 링크 : https://programmers.co.kr/learn/courses/30/lessons/42748
  */
 public class KthNumber {
 	public static void main(String[] args) {

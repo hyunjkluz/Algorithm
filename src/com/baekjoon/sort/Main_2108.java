@@ -5,6 +5,12 @@ import java.io.InputStreamReader;
 import java.util.LinkedHashMap;
 import java.util.Arrays;
 
+/**
+ * @author : kimhyunjin
+ * @CretaedAt :
+ * @문제 이름 : 통계학
+ * @문제 링크 : https://www.acmicpc.net/problem/2108
+ */
 public class Main_2108 {
 
 	public static void main(String[] args) throws Exception {
@@ -21,8 +27,6 @@ public class Main_2108 {
 		}
 
 		Arrays.sort(arr);
-//		printArray(arr);
-//		System.out.println("---------------");
 
 		// 1. 산술 평균 입력
 		System.out.println((int) Math.round((double) total / n));
@@ -54,13 +58,6 @@ public class Main_2108 {
 		int maxFreqLen = 1;
 		int[][] maxFreq = new int[2][2];
 		int maxCnt = -1;
-
-//		System.out.println();
-//		for (Integer key : count.keySet()) {
-//			Integer value = count.get(key);
-//			System.out.println(key + " : " + value);
-//		}
-//		System.out.println();
 
 		for (Integer key : count.keySet()) {
 			Integer value = count.get(key);

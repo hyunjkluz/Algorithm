@@ -11,6 +11,7 @@ import java.util.*;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Jan 5, 2021
+ * @문제 이름 : 문자열 폭발
  * @문제 링크 : https://www.acmicpc.net/problem/9935
  */
 public class Main_9935 {

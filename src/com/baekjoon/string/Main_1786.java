@@ -11,6 +11,7 @@ import java.util.ArrayList;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Jan 14, 2021
+ * @문제 이름 : 찾기 - KMP 알고리즘
  * @문제 링크 : https://www.acmicpc.net/problem/1786
  */
 public class Main_1786 {

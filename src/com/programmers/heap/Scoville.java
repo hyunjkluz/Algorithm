@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Sep 23, 2020
- * @문제 링 :
+ * @문제 링크 : https://programmers.co.kr/learn/courses/30/lessons/42626
  */
 public class Scoville {
 	public static void main(String[] args) {

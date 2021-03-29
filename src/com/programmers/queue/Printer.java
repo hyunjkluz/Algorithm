@@ -10,7 +10,7 @@ import java.util.Queue;
 /**
  * @author : kimhyunjin
  * @CretaedAt : Sep 8, 2020
- * @주요 개념 :
+ * @문제 링크 : https://programmers.co.kr/learn/courses/30/lessons/42587
  */
 class Work implements Comparable<Work> {
 	public Integer priority;
@@ -35,7 +35,7 @@ class Work implements Comparable<Work> {
 public class Printer {
 	public static void main(String[] agrs) {
 		int[] priorities = { 2, 1, 3, 2 };
-//		int[] priorities = { 1, 1, 9, 1, 1, 1 };
+		// int[] priorities = { 1, 1, 9, 1, 1, 1 };
 		int location = 2;
 
 		System.out.println("Result : " + solution(priorities, location));
